@@ -26,9 +26,8 @@ XButton2 - Suspend Script
 
 Issues:
 * Graphical display does not render on top of the game unless the game is set to windowed mode.
-
-* Solution 1: Set the game to windowed mode by editing the settings.ini usually located in My Documents.
-* Solution 2: Edit the X,Y coordinate variables in the script to move the widget to a second monitor if you have one.
+  * Solution 1: Set the game to windowed mode by editing the settings.ini usually located in My Documents.
+  * Solution 2: Edit the X,Y coordinate variables in the script to move the widget to a second monitor if you have one.
 
 
 To-do:
