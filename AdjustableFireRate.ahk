@@ -8,10 +8,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; You can change these variables below
   fireRate=100 ; Default firing rate in controled fire mode
-  XPOS := -100 ; On-screen coordinates for the display window.
+  XPOS := 100 ; On-screen coordinates for the display window.
   YPOS := 100 
   mode=0 ; Default starting mode
-; 0 off ; 1 Controled Fire ; 2 Slug Mode ; 3 Heli Mode ; 4 Semi Auto ; 
+; 0 off ; 1 Controled Fire ; 2 Shotgun Mode ; 3 Gunner Mode ; 4 Semi Auto ; 
 
 ; Disables optional inputs initially
   Hotkey, *NumpadAdd, Off
@@ -39,14 +39,14 @@ return ; End of all run-time executions
   Hotkey, *NumpadSub, On
   return
 
-+f2::    ; Sets to Slug mode
++f2::    ; Sets to Shotgun mode
   mode=2
   GuiControl,, FireRateText, Slug
   Hotkey, *NumpadAdd, Off
   Hotkey, *NumpadSub, Off
   return
 
-+f3::    ; Sets to Heli Gunner mode
++f3::    ; Sets to Gunner mode
   mode=3
   GuiControl,, FireRateText, Heli
   Hotkey, *NumpadAdd, Off
@@ -83,7 +83,7 @@ $~*LButton::
     Click
     Sleep fireRate
   }
-  ; Slug Mode Logic
+  ; Shotgun Mode Logic
   While mode == 2 && GetKeyState("LButton","p"){
     Click
     Sleep, 55
@@ -96,7 +96,7 @@ $~*LButton::
     }
       sleep, 500
   }
-  ; Heli Mode Logic
+  ; Gunner Mode Logic
   While mode==3{
   SendInput, {F1}
   Sleep 600
