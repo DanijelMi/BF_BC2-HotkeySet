@@ -34,6 +34,6 @@ To-do:
 * Find a better way to communicate data to the end user.
 * In Controled Fire Mode, change the fire-rate metric from miliseconds between shots to rounds per minute.
 * Add More Functions:
- - QuickScope automation
- - QuickScope-fire delay
- - Med/Ammo Kit Placement
+   - QuickScope automation
+   - QuickScope-fire delay
+   - Med/Ammo Kit Placement
